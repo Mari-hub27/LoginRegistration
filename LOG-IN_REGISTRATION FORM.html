@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="mypagestyle.css">
+	<title>Log-in and Registration Page</title>
+</head>
+<body>
+	<div class="container">
+		<div class="Form login-form">
+			<h1>Welcome</h1><br/>
+			<h2>Login</h2>
+			<form  action="#">
+				<div class="input-box">
+					<i class="fa-solid fa-user"></i>
+					<label for="#"> UserName</label>
+					<input type="text" name="name" placeholder="Enter Your Username*" required>
+				</div>
+
+				<div class="input-box">
+					<i class="fa-solid fa-lock"></i>
+					<input type="password" name="pass" placeholder="Enter Your Password*" minlength="8" maxlength="16" required>
+					<label for="#">Password</label>
+				</div>
+
+				<div class="forgot-section">
+					<span><input type="checkbox" name=" " id="checked"> Remember Me </span>
+					<span><a href="#">Forgot Password? </a></span>				
+				</div>
+
+				<button class="btn">Login</button>
+			</form>
+
+			<p>Or Log in using</p>
+			<div class="social-media">
+				<a href="#"><img src="https://i.pinimg.com/550x/f7/99/20/f79920f4cb34986684e29df42ec0cebe.jpg"></a>
+				<a href="#"><img src="https://i.pinimg.com/originals/60/41/99/604199df880fb029291ddd7c382e828b.jpg"></a>
+				<a href="#"><img src="https://i.pinimg.com/550x/58/a2/be/58a2bec02ecb40d12e507e2a212c46c6.jpg"></a>
+			</div>
+			
+			<p class="RegisteBtn RegiBtn" id="regbtn ">Don't have an account?<a href="#"> Register Now </a></p>
+		</div>
+
+		
+		<div class="Form Register-form">
+			<h2>Register</h2>
+			<form action="#">
+				<div class="input-box">
+					<i class="fa-solid fa-user"></i>
+					<label for="#"> Username</label>
+					<input type="text" name="name" placeholder="Enter Your Username*" required>
+				</div>
+
+				<div class="input-box">
+					<i class="fa-solid fa-envelope"></i>
+					<input type="Email" name="Email" placeholder="Enter Your Email Address*" required>
+					<label for=#> Email</label>
+				</div>
+
+				<div class="input-box">
+					<i class="fa-solid fa-lock"></i>
+					<input type="password" name="" placeholder="Enter Your Password*" minlength="8" maxlength="16" required>
+					<label for=#>Password</label>
+				</div>
+
+				<div class="forgot-section">
+					<span><input type="checkbox" name="" id="checked" required> I Understand and Agree with the Terms & Conditions. </span>
+				</div>
+				<button class="btn" class="loginBtn">Register</button>				
+			</form>
+			<p>Or Register using</p>
+			<div class="social-media">
+				<a href="#"><img src="https://i.pinimg.com/550x/f7/99/20/f79920f4cb34986684e29df42ec0cebe.jpg"></a>
+				<a href="#"><img src="https://i.pinimg.com/originals/60/41/99/604199df880fb029291ddd7c382e828b.jpg"></a>
+				<a href="#"><img src="https://i.pinimg.com/550x/58/a2/be/58a2bec02ecb40d12e507e2a212c46c6.jpg"></a>
+			</div>
+
+			<p id="logbtn"class="loginBtn" >Already have an Account? <a href="#">Log-in Now</a></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	const container = document.querySelector(".container");
+	const loginForm = document.querySelector(".login-form");
+	const RegisterForm = document.querySelector('.Register-form'); 
+	const RegiBtn = document.querySelector('.RegiBtn');
+	const LoginBtn = document.querySelector('.loginBtn'); 
+
+	RegiBtn.addEventListener('click', () => {
+	    RegisterForm.classList.add('active'); 
+	    loginForm.classList.add('active');
+	});
+
+	LoginBtn.addEventListener('click', () => {
+	    RegisterForm.classList.remove('active'); 
+	    loginForm.classList.remove('active');
+	});		
+
+	</script>
+
+</body>
+</html>
